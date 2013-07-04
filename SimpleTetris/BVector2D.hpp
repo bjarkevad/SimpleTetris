@@ -24,6 +24,6 @@ class BVector2D
    private:
       T x;
       T y;
-}
+};
 
 #endif // BVECTOR2D_H
