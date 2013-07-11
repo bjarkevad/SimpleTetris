@@ -5,8 +5,15 @@ using namespace std;
 
 int main()
 {
-    Renderer* renderer = new Renderer();
-    Game* game = new Game(renderer);
+    auto renderer = new Renderer();
+    auto game = new Game(renderer);
+
+    if(game == nullptr)
+    {
+        cout << "Error initializing game, exiting.." << endl;
+        return -1;
+    }
+    cout << "Game initialized successfully.." << endl;
 
     game->Start();
 

@@ -2,7 +2,8 @@
 
 Game::Game(Renderer* _renderer): renderer(_renderer)
 {
-    renderer->Init(800,600);
+    if(! renderer->Init(800,600))
+        this->~Game();
 }
 
 Game::~Game()
