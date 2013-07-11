@@ -1,6 +1,7 @@
 #ifndef GAME_HPP
 #define GAME_HPP
 #include "renderer.hpp"
+#include "block.hpp"
 
 class Game
 {
@@ -10,6 +11,7 @@ public:
     void Start();
 private:
     Renderer* renderer;
+    Block* blocks[];
 };
 
 #endif // GAME_HPP

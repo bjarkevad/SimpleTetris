@@ -1,6 +1,7 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 #include "BVector2D.hpp"
+#include "SDL/SDL.h"
 
 enum BlockType
 {
@@ -10,14 +11,14 @@ enum BlockType
 
 class Block
 {
-   public:
-      Block(BlockType _blockType);
-      ~Block();
+public:
+    Block(BlockType _blockType);
+    ~Block();
 
-      BVector2D<int> *blocknodes;
-      int blocksize = 0;
-   private:
-
+    BVector2D<int>  *coords;
+    BVector2D<int>  *blocknodes;
+    SDL_Surface     *surface;
+    int             blocksize = 0;
 };
 
 #endif // BLOCK_H

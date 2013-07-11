@@ -13,8 +13,11 @@ Game::~Game()
 
 void Game::Start()
 {
+    auto block = new Block(Cube);
+    renderer->AddBlock(*block);
+
     while(1)
     {
-        renderer->Render();
+        renderer->RenderScene();
     }
 }

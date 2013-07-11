@@ -23,4 +23,11 @@ Block::Block(BlockType _blockType)
      default:
          break;
    }
+
+   coords = new BVector2D<int>(0,0);
+}
+
+Block::~Block()
+{
+    SDL_FreeSurface(surface);
 }
